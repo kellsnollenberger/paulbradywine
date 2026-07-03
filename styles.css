@@ -8,6 +8,10 @@
   --hunter-green-soft: #dce7dc;
   --hunter-orange: #d86f27;
   --hunter-orange-dark: #af4f1d;
+  --bottle-blue: #d7eef2;
+  --bottle-yellow: #efe86f;
+  --bottle-pink: #d95575;
+  --bottle-teal: #22958b;
   --gold: #c89b45;
   --line: rgba(36, 25, 21, 0.14);
   --green-line: rgba(34, 65, 50, 0.2);
@@ -46,7 +50,7 @@ a {
 
 .site-header {
   align-items: center;
-  background: rgba(216, 111, 39, 0.96);
+  background: var(--hunter-orange);
   border-bottom: 4px solid var(--hunter-green);
   color: var(--cream);
   display: flex;
@@ -389,7 +393,16 @@ section {
 }
 
 .up-north {
-  background: var(--hunter-green-soft);
+  background: var(--bottle-blue);
+}
+
+.up-north .eyebrow {
+  color: var(--bottle-pink);
+}
+
+.up-north .section-heading {
+  border-bottom: 8px solid var(--bottle-yellow);
+  padding-bottom: 22px;
 }
 
 .sparkling-grid {
@@ -398,9 +411,17 @@ section {
 
 .sparkling-grid img {
   aspect-ratio: 5 / 4;
-  border: 1px solid var(--green-line);
+  border: 1px solid rgba(34, 65, 50, 0.28);
   object-fit: cover;
   width: 100%;
+}
+
+.sparkling-grid article:first-child {
+  border-top-color: var(--bottle-teal);
+}
+
+.sparkling-grid article:last-child {
+  border-top-color: var(--bottle-pink);
 }
 
 .menu-preview {
