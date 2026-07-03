@@ -3,11 +3,14 @@
   --muted: #6e6158;
   --paper: #f7f1e7;
   --cream: #fffaf0;
-  --brick: #a9422e;
+  --hunter-green: #224132;
+  --hunter-green-dark: #162c23;
+  --hunter-green-soft: #dce7dc;
+  --hunter-orange: #d86f27;
+  --hunter-orange-dark: #af4f1d;
   --gold: #c89b45;
-  --green: #304d3c;
-  --blue: #3b6888;
   --line: rgba(36, 25, 21, 0.14);
+  --green-line: rgba(34, 65, 50, 0.2);
 }
 
 * {
@@ -43,8 +46,9 @@ a {
 
 .site-header {
   align-items: center;
-  background: rgba(247, 241, 231, 0.92);
-  border-bottom: 1px solid var(--line);
+  background: rgba(34, 65, 50, 0.95);
+  border-bottom: 3px solid var(--hunter-orange);
+  color: var(--cream);
   display: flex;
   justify-content: space-between;
   min-height: 82px;
@@ -55,6 +59,7 @@ a {
 }
 
 .brand img {
+  filter: brightness(0) invert(1);
   height: 54px;
   width: auto;
 }
@@ -84,7 +89,7 @@ a {
 }
 
 .nav-toggle span {
-  background: var(--ink);
+  background: var(--cream);
   display: block;
   height: 2px;
   margin: 6px 0;
@@ -105,7 +110,7 @@ a {
 }
 
 .eyebrow {
-  color: var(--brick);
+  color: var(--hunter-orange);
   font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 800;
@@ -155,7 +160,7 @@ h3 {
 
 .button {
   align-items: center;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--hunter-green);
   display: inline-flex;
   font-family: Arial, sans-serif;
   font-size: 13px;
@@ -169,14 +174,29 @@ h3 {
 }
 
 .button.primary {
-  background: var(--ink);
+  background: var(--hunter-orange);
+  border-color: var(--hunter-orange);
   color: var(--cream);
 }
 
 .button.secondary,
 .button.ghost {
   background: transparent;
-  color: var(--ink);
+  color: var(--hunter-green);
+}
+
+.button.primary:hover,
+.button.primary:focus-visible {
+  background: var(--hunter-orange-dark);
+  border-color: var(--hunter-orange-dark);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible,
+.button.ghost:hover,
+.button.ghost:focus-visible {
+  background: var(--hunter-green);
+  color: var(--cream);
 }
 
 .hero-image {
@@ -192,8 +212,10 @@ h3 {
 }
 
 .feature-strip {
-  border-bottom: 1px solid var(--line);
-  border-top: 1px solid var(--line);
+  background: var(--hunter-green);
+  border-bottom: 3px solid var(--hunter-orange);
+  border-top: 3px solid var(--hunter-orange);
+  color: var(--cream);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -204,7 +226,7 @@ h3 {
 }
 
 .feature-strip div + div {
-  border-left: 1px solid var(--line);
+  border-left: 1px solid rgba(255, 250, 240, 0.24);
 }
 
 .feature-strip strong,
@@ -213,12 +235,13 @@ h3 {
 }
 
 .feature-strip strong {
+  color: var(--hunter-orange);
   font-size: 22px;
   margin-bottom: 10px;
 }
 
 .feature-strip span {
-  color: var(--muted);
+  color: rgba(255, 250, 240, 0.78);
 }
 
 section {
@@ -247,13 +270,13 @@ section {
 }
 
 .shop-band {
-  background: var(--green);
+  background: var(--hunter-green-dark);
   color: var(--cream);
 }
 
 .shop-band .eyebrow,
 .shop-band .section-heading p {
-  color: var(--gold);
+  color: var(--hunter-orange);
 }
 
 .section-heading {
@@ -269,9 +292,17 @@ section {
 
 .shop-option {
   border: 1px solid rgba(255, 250, 240, 0.28);
+  box-shadow: inset 0 0 0 0 var(--hunter-orange);
   min-height: 190px;
   padding: 24px;
   text-decoration: none;
+}
+
+.shop-option:hover,
+.shop-option:focus-visible {
+  background: rgba(216, 111, 39, 0.12);
+  border-color: var(--hunter-orange);
+  box-shadow: inset 0 -6px 0 0 var(--hunter-orange);
 }
 
 .shop-option span,
@@ -311,7 +342,7 @@ section {
 }
 
 .quote span {
-  color: var(--muted);
+  color: var(--hunter-orange);
   display: block;
   font-family: Arial, sans-serif;
   font-size: 13px;
@@ -333,13 +364,14 @@ section {
 
 .wine-card,
 .sparkling-grid article {
-  border-top: 1px solid var(--line);
+  border-top: 4px solid var(--hunter-orange);
   padding-top: 20px;
 }
 
 .wine-card img {
   aspect-ratio: 4 / 5;
-  background: var(--cream);
+  background: var(--hunter-green-soft);
+  border: 1px solid var(--green-line);
   object-fit: cover;
   width: 100%;
 }
@@ -357,7 +389,7 @@ section {
 }
 
 .up-north {
-  background: #e5eef1;
+  background: var(--hunter-green-soft);
 }
 
 .sparkling-grid {
@@ -366,12 +398,13 @@ section {
 
 .sparkling-grid img {
   aspect-ratio: 5 / 4;
+  border: 1px solid var(--green-line);
   object-fit: cover;
   width: 100%;
 }
 
 .menu-preview {
-  background: var(--brick);
+  background: var(--hunter-orange);
   color: var(--cream);
   display: grid;
   gap: 36px;
@@ -379,7 +412,7 @@ section {
 }
 
 .menu-preview .eyebrow {
-  color: #ffd38d;
+  color: var(--hunter-green-dark);
 }
 
 .menu-columns {
@@ -414,7 +447,8 @@ section {
 
 .site-footer {
   align-items: end;
-  background: var(--ink);
+  background: var(--hunter-green-dark);
+  border-top: 8px solid var(--hunter-orange);
   color: var(--cream);
   display: grid;
   gap: 28px;
@@ -443,7 +477,7 @@ section {
 
 .age-gate {
   align-items: center;
-  background: rgba(36, 25, 21, 0.92);
+  background: rgba(22, 44, 35, 0.94);
   display: flex;
   inset: 0;
   justify-content: center;
@@ -458,6 +492,7 @@ section {
 
 .age-panel {
   background: var(--paper);
+  border-top: 8px solid var(--hunter-orange);
   max-width: 560px;
   padding: clamp(28px, 5vw, 52px);
   width: 100%;
@@ -484,8 +519,8 @@ section {
 
   .site-nav {
     align-items: stretch;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
+    background: var(--hunter-green);
+    border-bottom: 3px solid var(--hunter-orange);
     display: none;
     flex-direction: column;
     left: 0;
@@ -524,7 +559,7 @@ section {
 
   .feature-strip div + div {
     border-left: 0;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255, 250, 240, 0.24);
   }
 
   .shop-option strong {
