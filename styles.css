@@ -9,9 +9,6 @@
   --hunter-orange: #d86f27;
   --hunter-orange-dark: #af4f1d;
   --bottle-blue: #d7eef2;
-  --bottle-yellow: #efe86f;
-  --bottle-pink: #d95575;
-  --bottle-teal: #22958b;
   --gold: #c89b45;
   --line: rgba(36, 25, 21, 0.14);
   --green-line: rgba(34, 65, 50, 0.2);
@@ -397,12 +394,7 @@ section {
 }
 
 .up-north .eyebrow {
-  color: var(--bottle-pink);
-}
-
-.up-north .section-heading {
-  border-bottom: 8px solid var(--bottle-yellow);
-  padding-bottom: 22px;
+  color: var(--hunter-green);
 }
 
 .sparkling-grid {
@@ -416,12 +408,9 @@ section {
   width: 100%;
 }
 
-.sparkling-grid article:first-child {
-  border-top-color: var(--bottle-teal);
-}
-
-.sparkling-grid article:last-child {
-  border-top-color: var(--bottle-pink);
+.up-north .sparkling-grid article {
+  border-top: 0;
+  padding-top: 0;
 }
 
 .menu-preview {
