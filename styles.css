@@ -402,10 +402,9 @@ section {
 }
 
 .sparkling-grid img {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
   border: 1px solid rgba(34, 65, 50, 0.28);
   object-fit: cover;
-  object-position: center;
   width: 100%;
 }
 
