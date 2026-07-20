@@ -254,7 +254,8 @@ section {
 .wine-section,
 .up-north,
 .menu-preview,
-.faq {
+.faq,
+.newsletter {
   padding: clamp(54px, 8vw, 112px) clamp(18px, 4vw, 52px);
 }
 
@@ -455,6 +456,41 @@ section {
   font-weight: 700;
 }
 
+.newsletter {
+  align-items: center;
+  background: var(--hunter-orange);
+  color: var(--cream);
+  display: grid;
+  gap: clamp(32px, 6vw, 96px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+}
+
+.newsletter .eyebrow {
+  color: var(--hunter-green-dark);
+}
+
+.newsletter h2 {
+  margin-bottom: 0;
+}
+
+.newsletter-copy p {
+  font-size: clamp(18px, 2vw, 22px);
+  max-width: 560px;
+}
+
+.newsletter-button {
+  background: var(--hunter-green);
+  border-color: var(--hunter-green);
+  color: var(--cream);
+  margin-top: 12px;
+}
+
+.newsletter-button:hover,
+.newsletter-button:focus-visible {
+  background: var(--hunter-green-dark);
+  border-color: var(--hunter-green-dark);
+}
+
 .site-footer {
   align-items: end;
   background: var(--hunter-orange-dark);
@@ -548,6 +584,7 @@ section {
   .split,
   .gallery-band,
   .menu-preview,
+  .newsletter,
   .site-footer {
     grid-template-columns: 1fr;
   }
